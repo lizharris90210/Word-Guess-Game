@@ -1,0 +1,11 @@
+h1 {
+    justify-content: center;
+    float: left;
+}
+
+body {
+    background-image: url("https://i.pinimg.com/236x/6e/63/7d/6e637ddd9213d6ab69ecb9001af4d1a6--harry-harry-harry-potter-.jpg");
+    background-size: 100% 100%;
+    background-blend-mode: lighten;
+    background: no-repeat;
+}

@@ -1,0 +1,2 @@
+
+object.addEventListener("keypress", myScript);
