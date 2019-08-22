@@ -1,10 +1,10 @@
 //Pick word
-function getItem() {}
+function getItem(words) {
 
 //Words
 var words = ['magic', 'broom', 'spell', 'charm', 'wand'];
 document.getElementById("wordGuess").innerHTML = words[Math.floor(Math.random() * words.length)];
-  
+}
 //Answer
 var answerArray = [];
 for (var i = 0; i < word.length; i++) {
