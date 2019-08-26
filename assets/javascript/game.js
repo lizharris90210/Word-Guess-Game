@@ -19,67 +19,55 @@ for (var i = 0; i < wordRandom.length; i++) {
 //  document.getElementById("lettersGuessed").innerHTML += lettersGuessed + " ";
 
 var remainingLetters = [];
-(wordRandom.length - "_");
+// (wordRandom.length - "_");
+// if ('wordRandom.length' < 1); alert('You Win!')
 
 // Stored guesses
-var guesses= [];
+var guess= [];
 document.getElementById(lettersAndDashes);
 guesses.innerHTML= lettersAndDashes;
-console.log(guesses);
+console.log(guess); 
+
+// replace progress Word underscore with letter pressed
+document.getElementById("lettersAndDashes").innerHTML = answerArray.join(" ");
 
 // GET ELEMENTS
-var winsNumber = document.getElementById("winsNumber");
+var winsNumber = (wordRandom.length < 1)
+document.getElementById("winsNumber");
 winsNumber.innerHTML= 0;
 var losses = document.getElementById("losses");
 lossesNumber.innerHTML= 0;
-remainingLetters.innerHTML= wordRandom.join;
+answerArray.innerHTML= wordRandom.join;
 var lettersGuessed = document.getElementById("lettersGuessed");
-lettersGuessed.innerHTML= answerArray;
-//**************GAME LOOP****************//
-
-document.onkeypress = function myFunction() {
-    var x = document.getElementById("instructions");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }}
-
-//letters left to be guessed and alert progress
-while (remainingLetters > 0) {
-   document.createElement('li');
-      list.id = 'letter';
-      list.innerHTML = alphabet[i];
-      check();
-   alert(answerArray.join(" "));
-}
+var letter = document.getElementById('letter');
+letter.innerHTML = (wordRandom.length + 5)
 
 
 
-// // Guesses ul
-//     result = function (guesses) {
-//       wordHolder = document.getElementById('lettersAndDashes').innerHTML= "lettersAndDashes";
+// Guesses ul
+    result = function (guesses) {
+      wordHolder = document.getElementById('lettersAndDashes').innerHTML= "lettersAndDashes";
   
-//       for (var j = 0; j < wordRandom.length; j++) {
-//         correct.setAttribute('id', 'my-word');
-//         guess = document.createElement('li');
-//         guess.setAttribute('class', 'guess');
-//         if (wordRandom[j] === "-") {
-//           guess.innerHTML = "-";
-//           space = 1;
-//         } else {
-//           guess.innerHTML = "_";
-//         }
+      for (var j = 0; j < wordRandom.length; j++) {
+        correct.setAttribute('id', 'my-word');
+        guesses = document.createElement('li');
+        guesses.setAttribute('class', 'guess');
+        if (wordRandom[j] === "-") {
+          guesses.innerHTML = "-";
+          space = 1;
+        } else {
+          guesses.innerHTML = "_";
+        }
   
-//         guesses.push(guess);
-//         wordHolder.appendChild(correct);
-//         correct.appendChild(guess);
-//       }
-//     }
+        guesses.push(guesses);
+        wordHolder.appendChild(correct);
+        correct.appendChild(guess);
+      }
+    }
 // Correct guess wins!
-for (var k = 0; k < guesses.length; k++) {
-   if (counter + space === guesses.length) {
-     guesses.innerHTML = "You win!"
+for (var k = 0; k < guess.length; k++) {
+   if (counter + space === guess.length) {
+     guess.innerHTML = "You win!"
    }}
 //****************END GAME LOOP**********//
 
@@ -91,12 +79,12 @@ check = function () {
      this.setAttribute("class", "active");
      this.onkeypress = null;
      for (var l = 0; l < wordRandom.length; l++) {
-       if (wordRandom[l] === guess) {
-         guesses[l].innerHTML = guess;
+       if (wordRandom[l] === guesses) {
+         guesses[l].innerHTML = guesses;
          counter += 1;
        } 
      }
-     var k = (wordRandom.indexOf(guess));
+     var k = (wordRandom.indexOf(guesses));
      if (k === -1) {
        winsNumber -= 1;
      } else {
@@ -105,7 +93,7 @@ check = function () {
    }
  }
 //  Replace word with dashes
- wordRandom = wordRandom.replace(/\s/g, "-");
+ wordRandom = wordRandom.replace("-");
 
 function newFunction() {
   return "guesses";
@@ -124,12 +112,12 @@ function letterInWord(letter) {
 // return number of letters that is still not guessed
 function lettersToGuess() {
   var i ;
-  var toGess = 0 ;
+  var toGuess = 0 ;
   for (i in progressWord) {
       if (progressWord[i] === "__")
-          toGess++;
+          toGuess++;
   }
-  return toGess;
+  return toGuess;
 }
 
 // These are the key events used to play and to document the letters already used and/or
@@ -153,6 +141,5 @@ document.onkeyup = function (event) {
       // replace progress Word underscore with letter pressed
       document.getElementById("wordGuess").innerHTML = wordRandom.join(" ");
   } else {
-      // alert("WRONG!");
       document.getElementById("lettersGuessed").innerHTML += lettersGuessed + " ";
   }}

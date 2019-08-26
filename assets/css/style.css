@@ -96,8 +96,7 @@ body {
 
 #guess,
 #wordGuess
-#lettersAndDashes
-div {
+#lettersAndDashes {
   text-align: center;
   margin: 10px;
   width: 10%;
@@ -133,7 +132,7 @@ font-size: 3em;
 }
 
 /* Press any key to play */
-.instructions {
+#instructions {
   font-weight: bold;
   font-family: 'Aclonica', san serif;
   text-align: center;
