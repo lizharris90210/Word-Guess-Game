@@ -1,19 +1,28 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: #fca504;
     background-image: url("https://vignette.wikia.nocookie.net/harrypotter/images/c/ce/Weasleys_Wizard_Wheezes.png/revision/latest?cb=20161124001602") ;
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 50%;
-    
+    background-size: 45%;
 }
 
+/* answer container */
+.container {
+  width: 50%;
+  height: 30%;
+  font-size: 6em;
+  color: #ff9900;
+  position: center;
+  float: left;
+
+}
+/* Title with flashing */
 .container-fluid {
     font-size: 4em;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: rgb(136, 7, 241);
     font-weight: bold;
     font-family: 'Aclonica', san serif;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(94, 55, 55, 0.15);
@@ -21,10 +30,10 @@ body {
         
         -webkit-animation-name: opacity;
         -webkit-animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: 3;
         animation-name: opacity;
         animation-duration: 2s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 3;
       }
   
   
@@ -85,45 +94,92 @@ body {
   }
   
 
-  /* The side navigation menu */
-.sidebar {
+#guess,
+#wordGuess
+#lettersAndDashes
+div {
+  text-align: center;
   margin: 10px;
-  padding: 0;
+  width: 10%;
+  padding: 10px;
+}
+
+  /* The side navigation menu */
+.sidebarR {
+  margin: 20px;
+  padding: 5px;
+  border: 2px #ff9900;
   width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
+  background-color:  rgb(136, 7, 241);
+  color: rgb(255, 255, 255);
+  float: right;
   height: auto;
   overflow: auto;
   font-weight: bold;
   font-family: 'Aclonica', san serif;
 }
-
-p1, p2 {
-  font-weight: bold;
-  font-family: 'Aclonica', san serif;
+.sidebarL {
+margin: 20px;
+padding: 5px;
+border: 2px #ff9900;
+color: rgb(0, 0, 0);
+float: left;
+text-align: center;
+height: auto;
+overflow: auto;
+font-weight: bold;
+font-family: 'Aclonica', san serif;
+font-size: 3em;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
+/* Press any key to play */
+.instructions {
+  font-weight: bold;
+  font-family: 'Aclonica', san serif;
+  text-align: center;
+  bottom: 0;
+  font-size: 2em;
+}
+#letter {
+  font-family: 'Aclonica', san serif;
+  text-align: center;
+  bottom: 0;
+  font-size: 1em;
+  display: inline;
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
-  .sidebar {
+  .sidebar 
+  .container-fluid  {
     width: 100%;
     height: auto;
     position: relative;
   }
-  .sidebar a {float: left;}
+  .sidebar {float: left;}
   div.content {margin-left: 0;}
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
-  .sidebar a {
+  .sidebar 
+  .container-fluid {
     text-align: center;
     float: none;
   }
